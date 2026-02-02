@@ -2828,7 +2828,7 @@ const AdminDashboardInner: React.FC<Props> = ({ onNavigate, settings, onUpdateSe
                   {currentUser?.role === 'ADMIN' && <DashboardCard icon={Trash2} label="Recycle Bin" onClick={() => setActiveTab('RECYCLE')} color="red" count={recycleBin.length} />}
                   <DashboardCard icon={LogOut} label="Exit" onClick={() => onNavigate('STUDENT_DASHBOARD')} color="slate" />
               </div>
-          </div>
+          
       )}
 
 

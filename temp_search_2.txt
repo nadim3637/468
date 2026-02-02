@@ -1,0 +1,23 @@
+          unsubReqs();
+      };
+  }, []);
+
+  useEffect(() => {
+      if (activeTab === 'DATABASE') {
+          setDbContent(localStorage.getItem(dbKey) || '');
+      }
+  }, [activeTab, dbKey]);
+
+  // Clear selections when switching main tabs
+--
+                  )}
+              </div>
+          </div>
+      )}
+
+      {activeTab === 'DATABASE' && (
+          <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 animate-in slide-in-from-bottom-4">
+              <div className="flex items-center gap-4 mb-6"><button onClick={() => setActiveTab('DASHBOARD')} className="bg-slate-100 p-2 rounded-full hover:bg-slate-200"><ArrowLeft size={20} /></button><h3 className="text-xl font-black text-slate-800">Database Viewer</h3></div>
+              <div className="bg-slate-900 rounded-xl p-4">
+                  <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
+                      {['nst_users', 'nst_system_settings', 'nst_activity_log', 'nst_iic_posts', 'nst_leaderboard'].map(k => (
